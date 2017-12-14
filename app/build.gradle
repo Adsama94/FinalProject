@@ -45,6 +45,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.6.2'
     compile project(":javaJokeLibrary")
     compile project(":androidLibrary")
-    compile project(":backend")
     compile project(path: ":backend", configuration: "android-endpoints")
 }

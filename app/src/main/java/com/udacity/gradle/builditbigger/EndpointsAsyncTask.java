@@ -9,6 +9,7 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
@@ -37,8 +38,8 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
 
             myApiService = builder.build();
         }
-        context = params[0].first;
-        String name = params[0].second;
+        context = pairs[0].first;
+        String name = pairs[0].second;
         try {
             return myApiService.sayHi(name).execute().getData();
         } catch (IOException e) {
