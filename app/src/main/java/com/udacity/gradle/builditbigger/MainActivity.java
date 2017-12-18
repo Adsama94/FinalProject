@@ -82,10 +82,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(Pair<Context, String>[] pairs) {
             if (myApiService == null) {  // Only do this once
-                MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                        .setRootUrl("https://finalproject-189010.appspot.com/_ah/api/");
-                // end options for devappserver
-
+                MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null).setRootUrl("https://finalproject-189010.appspot.com/_ah/api/");
                 myApiService = builder.build();
             }
             context = pairs[0].first;
