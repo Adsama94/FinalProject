@@ -16,4 +16,10 @@ public class AndroidJokeActivity extends AppCompatActivity {
         String passedJoke = getIntent().getStringExtra(JOKE_EXTRA_KEY);
         jokeTv.setText(passedJoke);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
