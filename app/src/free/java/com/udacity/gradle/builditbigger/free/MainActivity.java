@@ -3,8 +3,8 @@ package com.udacity.gradle.builditbigger.free;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {
-            Log.d(com.udacity.gradle.builditbigger.MainActivity.class.getSimpleName(), "The interstitial wasn't loaded yet.");
+            Log.d(com.udacity.gradle.builditbigger.free.MainActivity.class.getSimpleName(), "The interstitial wasn't loaded yet.");
         }
         Intent intent = new Intent(this, AndroidJokeActivity.class);
         intent.putExtra(JOKE_EXTRA_KEY, joke);
