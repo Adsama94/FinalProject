@@ -16,9 +16,9 @@
       <configuration>
         <option name="HTTP_ADDRESS" value="localhost" />
         <option name="HTTP_PORT" value="8080" />
-        <option name="WAR_DIR" value="C:\Users\ADSAMA 3\Desktop\Udacity-Build-it-Bigger\backend\build\exploded-app" />
-        <option name="WEB_APP_DIR" value="C:\Users\ADSAMA 3\Desktop\Udacity-Build-it-Bigger\backend\src\main\webapp" />
-        <option name="APPENGINE_SDKROOT" value="C:\Users\ADSAMA 3\.gradle\appengine-sdk\appengine-java-sdk-1.9.42" />
+        <option name="WAR_DIR" value="C:\Users\ADSAMA\Documents\FinalProject\backend\build\exploded-app" />
+        <option name="WEB_APP_DIR" value="C:\Users\ADSAMA\Documents\FinalProject\backend\src\main\webapp" />
+        <option name="APPENGINE_SDKROOT" value="C:\Users\ADSAMA\.gradle\appengine-sdk\appengine-java-sdk-1.9.42" />
       </configuration>
     </facet>
   </component>
@@ -27,12 +27,12 @@
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/functionalTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/functionalTest/resources" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/functionalTest/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>

@@ -60,16 +60,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
         jokeProgressBar.setVisibility(View.VISIBLE);
-        JavaJoke javaJoke = new JavaJoke();
-        joke = javaJoke.getBadJokes();
-        new com.udacity.gradle.builditbigger.free.MainActivity.EndpointsAsyncTask().execute(new Pair<Context, String>(this, joke));
+        new com.udacity.gradle.builditbigger.free.MainActivity.EndpointsAsyncTask().execute(new Pair<Context, String>(this, new JavaJoke().getBadJokes()));
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {
             Log.d(com.udacity.gradle.builditbigger.free.MainActivity.class.getSimpleName(), "The interstitial wasn't loaded yet.");
         }
+    }
+
+    public void startActivity(String sentJoke) {
         Intent intent = new Intent(this, AndroidJokeActivity.class);
-        intent.putExtra(JOKE_EXTRA_KEY, joke);
+        intent.putExtra(JOKE_EXTRA_KEY, sentJoke);
         startActivity(intent);
     }
 
@@ -85,9 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 myApiService = builder.build();
             }
             context = pairs[0].first;
-            String name = pairs[0].second;
             try {
-                return myApiService.sayHi(name).execute().getData();
+                return myApiService.sayHi(new JavaJoke().getBadJokes()).execute().getData();
             } catch (IOException e) {
                 return e.getMessage();
             }
@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             joke = result;
+            startActivity(result);
             jokeProgressBar.setVisibility(View.GONE);
         }
     }

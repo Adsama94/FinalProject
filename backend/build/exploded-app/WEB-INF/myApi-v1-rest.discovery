@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"RnkXbyw9us4_w3H-FU6An0C4oYs/wUQWKZuYtjO2Ohxt_HyTUG1VDp0\"",
+ "etag": "\"RnkXbyw9us4_w3H-FU6An0C4oYs/7f5e09kvUIlJ9-Trp_64iT1gpHI\"",
  "discoveryVersion": "v1",
  "id": "myApi:v1",
  "name": "myApi",
@@ -13,10 +13,10 @@
   "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
  },
  "protocol": "rest",
- "baseUrl": "https://finalproject-189010.appspot.com/_ah/api/myApi/v1/sayHi/",
- "basePath": "/_ah/api/myApi/v1/sayHi/",
+ "baseUrl": "https://finalproject-189010.appspot.com/_ah/api/myApi/v1/",
+ "basePath": "/_ah/api/myApi/v1/",
  "rootUrl": "https://finalproject-189010.appspot.com/_ah/api/",
- "servicePath": "myApi/v1/sayHi/",
+ "servicePath": "myApi/v1/",
  "batchPath": "batch",
  "parameters": {
   "alt": {
@@ -84,9 +84,20 @@
   }
  },
  "methods": {
+  "getJavaJokes": {
+   "id": "myApi.getJavaJokes",
+   "path": "mybean",
+   "httpMethod": "GET",
+   "response": {
+    "$ref": "MyBean"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
   "sayHi": {
    "id": "myApi.sayHi",
-   "path": "{name}",
+   "path": "sayHi/{name}",
    "httpMethod": "POST",
    "parameters": {
     "name": {
